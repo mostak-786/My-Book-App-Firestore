@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <title>My Movies App</title>
+  </head>
+
+  <body>
+
+	<div class="container">
+
+  <h1 id="mainTitle">My Movies</h1>
+
+  <!-- ADD MOVIE -->
+  <div class="d-flex mb-3">
+    <input type="text" id="movieName" class="form-control" placeholder="Movie name">
+    <input type="text" id="director" class="form-control mx-2" placeholder="Director">
+
+    <select id="rating" class="form-control mx-2 w-25">
+      <option value="1">1</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
+      <option value="4">4</option>
+      <option value="5">5</option>
+    </select>
+
+    <input type="date" id="releaseDate" class="form-control mx-2">
+
+    <button id="addBtn" class="btn btn-primary">Add Movie</button>
+    
+  </div>
+<!-- SORT BUTTONS (FIXED) -->
+  <div class="mb-3">
+    <button class="btn btn-secondary" id="sortByName">
+      Sort by Name
+    </button>
+
+    <button class="btn btn-secondary" id="sortByRating">
+      Sort by Rating
+    </button>
+  </div>
+
+  <!-- TABLE -->
+  <table class="table table-striped">
+    <thead class="table-dark">
+      <tr>
+        <th>Movie</th>
+        <th>Director</th>
+        <th>Rating</th>
+        <th>Date</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+
+    <tbody id="reviewList"></tbody>
+  </table>
+</div>
+
+<!-- jQuery (IMPORTANT) -->
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+<!-- YOUR FIREBASE SCRIPT -->
+<script type="module" src="myscripts.js"></script>
+
+
+</body>
+</html>
